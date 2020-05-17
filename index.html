@@ -2,9 +2,52 @@
 <html>
     <head>
         <title>My Webpage</title>
+        <meta name="viewport" content="width=deviec-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <style>
+            @media (min-width: 750px) {
+                #size::before {
+                    content: "browser width more than 750px"
+                }
+                body {
+                    background-color: rgb(255, 252, 210);
+                }
+            }
+
+            @media (max-width: 749px) {
+                #size::before {
+                    content: "browser width  less than 500px"
+                }
+                body {
+                    background-color: rgb(210, 255, 214);
+                }
+            }
+        </style>
     </head>
     <body>
+        <nav class="container-fluid">
+            <div class="row">
+                <div class="col-3" id="first">
+                    <a href="index.html"><u>Home</u></a>
+                </div>
+                <div class="col-3">
+                    <a href="shows.html">Shows</a>
+                </div>
+                <div class="col-3">
+                    <a href="education.html">Education</a>
+                </div>
+                <div class="col-3" id="last">
+                    <a href="sports.html">Sports</a>
+                </div>
+            </div>
+        </nav>
         <h1>Kaye's Webpage</h1>
+        <h2>Home</h2>
+        <p>
+            You are viewing this in a <strong><span id="size"></span></strong>, resize the window and see the magic happen!<br><br>
+            This is my webpage for Project0. It includes some of my favourite <a href="shows.html">shows</a>, my past <a href="education.html">education</a> and some of the <a href="sports.html">sports</a> I like playing.
+        </p>
     </body>
 </html>
